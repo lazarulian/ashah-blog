@@ -23,6 +23,12 @@ const Header = () => {
           </span>
         </div>
         <div className="hidden md:float-left md:contents">
+          <a
+            href="https://www.apurvashah.org/"
+            class="md:float-right bg-blue-500  text-white font-bold py-2 px-4 ml-4 border border-white rounded transition: duration-500 hover:text-yellow-400"
+          >
+            Portfolio
+          </a>
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
               <span className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer transition duration-500 hover:text-yellow-400">
