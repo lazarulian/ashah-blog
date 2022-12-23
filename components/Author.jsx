@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Author = () => {
-  return (
-    <h1>
-        Author
-    </h1>
-  )
-}
+  return <h1>Author</h1>;
+};
 
-export default Author
+export default Author;
