@@ -7,8 +7,12 @@ const Categories = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    getCategories().then((newCategories) => setCategories(newCategories));
-  });
+    const fetchData = async () => {
+      const data = await getCategories();
+      setCategories(data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-12 mb-8">
