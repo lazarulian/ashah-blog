@@ -8,13 +8,17 @@ const PostWidget = ({ categories, slug }) => {
 
   useEffect(() => {
     if (slug) {
-      getSimilarPosts(categories, slug).then((result) =>
-        setRelatedPosts(result)
-      );
+      const fetchData = async () => {
+        const data = await getSimilarPosts(categories, slug);
+        setRelatedPosts(data);
+      };
+      fetchData();
     } else {
-      getRecentPosts(categories, slug).then((result) =>
-        setRelatedPosts(result)
-      );
+      const fetchData = async () => {
+        const data = await getRecentPosts(categories, slug);
+        setRelatedPosts(data);
+      };
+      fetchData();
     }
   }, [slug]);
 

@@ -29,10 +29,12 @@ const FeaturedPosts = () => {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result);
+    const fetchData = async () => {
+      const data = await getFeaturedPosts();
+      setFeaturedPosts(data);
       setDataLoaded(true);
-    });
+    };
+    fetchData();
   }, []);
 
   const customLeftArrow = (
