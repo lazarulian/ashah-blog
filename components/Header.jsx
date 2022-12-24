@@ -19,7 +19,7 @@ const Header = () => {
         <div className="md:float-left block">
           <Link href="/">
             <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-4xl text-white">
-              CheatCodes
+              Passing Colors
             </span>
           </Link>
           <br></br>
@@ -30,7 +30,7 @@ const Header = () => {
         <div className="hidden md:float-left md:contents">
           <a
             href="https://www.apurvashah.org/"
-            class="md:float-right bg-blue-500  text-white font-bold py-2 px-4 ml-4 border border-white rounded transition: duration-500 hover:text-yellow-400"
+            class="md:float-right  text-white font-bold py-2 px-4 ml-4 border border-white rounded transition: duration-500 hover:text-yellow-400 hover:border-yellow-400"
           >
             Portfolio
           </a>

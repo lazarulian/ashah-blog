@@ -16,6 +16,23 @@ const CategoryPost = ({ posts, slug, params }) => {
 
   return (
     <div className="container mx-auto px-10 mb-8">
+      <head>
+        {/* General */}
+        <title>Passing Colors</title>
+        <meta charset="utf-8" />
+        <meta name="language" content="ES" />
+        <meta name="robots" content="index,follow" />
+        {/* Apple */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        {/* Facebook */}
+        <meta property="og:title" content="Passing Colors" />
+        <meta property="og:image" content="../../public/wallpaper.png" />
+        {/* Twitter */}
+        <meta name="twitter:title" content="Passing Colors" />
+        <meta name="twitter:image" content="../../public/wallpaper.png" />
+        <meta name="twitter:card" content="../../public/wallpaper.png" />
+      </head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
