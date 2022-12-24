@@ -20,7 +20,7 @@ export default function Home({}) {
 
   return (
     <div className="container mx-auto px-10 mb-8">
-      <Head>
+      <head>
         <title>Passing Colors</title>
         <meta charset="utf-8" />
         <meta name="language" content="ES" />
@@ -38,7 +38,7 @@ export default function Home({}) {
         <meta name="description" content="Sharing my journey through life!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
       <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
