@@ -1,132 +1,9 @@
 import React from "react";
 import moment from "moment";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const PostDetail = ({ post }) => {
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
-
-    if (obj) {
-      if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>;
-      }
-
-      if (obj.italic) {
-        modifiedText = <em key={index}>{text}</em>;
-      }
-
-      if (obj.underline) {
-        modifiedText = <u key={index}>{text}</u>;
-      }
-    }
-
-    switch (type) {
-      case "paragraph":
-        return (
-          <p key={index} className="mb-8">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </p>
-        );
-      case "heading-one":
-        return (
-          <h1
-            key={index}
-            className="text-4xl leading-normal mt-0 mb-2 font-semibold"
-          >
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h1>
-        );
-      case "heading-two":
-        return (
-          <h2
-            key={index}
-            className="text-3xl leading-normal mt-0 mb-2 font-semibold"
-          >
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h2>
-        );
-      case "heading-three":
-        return (
-          <h3
-            key={index}
-            className="text-2xl leading-normal mt-0 mb-2 font-semibold"
-          >
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h3>
-        );
-      case "heading-four":
-        return (
-          <h4
-            key={index}
-            className="text-xl leading-normal mt-0 mb-2 font-semibold"
-          >
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h4>
-        );
-      case "heading-five":
-        return (
-          <h5
-            key={index}
-            className="text-lg leading-normal mt-0 mb-2 font-semibold"
-          >
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h5>
-        );
-      case "heading-six":
-        return (
-          <h6
-            key={index}
-            className="text-md leading-normal mt-0 mb-2 font-semibold"
-          >
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h6>
-        );
-
-      case "bulleted-list":
-        return (
-          <ul className="list-disc">
-            <li key={index}>
-              {modifiedText.map((item, i) => (
-                <React.Fragment key={i}>{item}</React.Fragment>
-              ))}
-            </li>
-          </ul>
-        );
-
-      case "image":
-        return (
-          <img
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
-        );
-      case "link":
-        return (
-          <a key={index} href={obj.href} className="text-md text-blue-700">
-            <React.Fragment>{obj.title}</React.Fragment>
-          </a>
-        );
-      default:
-        return modifiedText;
-    }
-  };
-
+  console.log(post.content.raw.children);
   return (
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md mb-6">
@@ -173,12 +50,75 @@ const PostDetail = ({ post }) => {
         </div>
         <div className="lg:pr-5 lg:pl-5">
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-          {post.content.raw.children.map((typeObj, index) => {
-            const children = typeObj.children.map((item, itemIndex) =>
-              getContentFragment(itemIndex, item.text, item)
-            );
-            return getContentFragment(index, children, typeObj, typeObj.type);
-          })}
+          <RichText
+            content={post.content.raw.children}
+            renderers={{
+              // Headings
+              h1: ({ children }) => (
+                <h1 className="text-4xl leading-normal mt-0 mb-2 font-semibold">
+                  {children}
+                </h1>
+              ),
+              h2: ({ children }) => (
+                <h2 className="text-3xl leading-normal mt-0 mb-2 font-semibold">
+                  {children}
+                </h2>
+              ),
+              h3: ({ children }) => (
+                <h3 className="text-2xl leading-normal mt-0 mb-2 font-semibold">
+                  {children}
+                </h3>
+              ),
+              h4: ({ children }) => (
+                <h4 className="text-xl leading-normal mt-0 mb-2 font-semibold">
+                  {children}
+                </h4>
+              ),
+              h5: ({ children }) => (
+                <h5 className="text-lg leading-normal mt-0 mb-2 font-semibold">
+                  {children}
+                </h5>
+              ),
+              h6: ({ children }) => (
+                <h6 className="text-md leading-normal mt-0 mb-2 font-semibold">
+                  {children}
+                </h6>
+              ),
+
+              // Styles
+              bold: ({ children }) => <b>{children}</b>,
+              italic: ({ children }) => <em>{children}</em>,
+              underline: ({ children }) => <u>{children}</u>,
+
+              // Other Elements
+              p: ({ children }) => <p className="mb-8">{children}</p>,
+              a: ({ children, href }) => (
+                <a className="text-md text-blue-700 mb-8" href={href}>
+                  {children}
+                </a>
+              ),
+              code: ({ children }) => (
+                <code className="bg-gray-200	 text-black rounded-md p-1">
+                  {children}
+                </code>
+              ),
+              code_block: ({ children }) => (
+                <div className="bg-gray-200	 text-black rounded-md p-1 ">
+                  <p className="break-all">{children}</p>
+                </div>
+              ),
+              ul: ({ children }) => (
+                <div>
+                  <l1>{children}</l1>
+                </div>
+              ),
+              ol: ({ children }) => (
+                <div>
+                  <l1>{children}</l1>
+                </div>
+              ),
+            }}
+          />
         </div>
       </div>
     </div>
