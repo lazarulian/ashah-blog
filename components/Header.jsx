@@ -14,9 +14,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-blue-400 py-8">
-        <div className="md:float-left block">
+    <div className="container md:mx-auto md:px-10 mb-8">
+      <div className="md:border-b w-full md:inline-block border-blue-400 pt-8 md:pb-8">
+        <div className="md:float-left md:text-left block text-center">
           <Link href="/">
             <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-4xl text-white">
               Passing Colors

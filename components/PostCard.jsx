@@ -15,21 +15,21 @@ const PostCard = ({ post }) => {
         />
       </div>
       <h1
-        className="transition duration-1000 text-center mb-8 mr-6 ml-6 cursor-pointer 
+        className="transition duration-1000 text-center mb-4 mr-6 ml-6 cursor-pointer 
       hover:text-pink-600 text-2xl font-semibold"
       >
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
-      <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
+      <div className="block lg:flex text-center items-center justify-center mb-4 w-full">
         <div className="flex items-center justify-center mb-4 lg:md-0 w-full lg:w-auto">
           <img
-            className="align-middle rounded-full"
+            className="md:block hidden align-middle rounded-full"
             alt={post.author.name}
             height="30px"
             width="30px"
             src={post.author.photo.url}
           />
-          <p className="inline align-middle text-gray-700 ml-2 mr-2 text-lg">
+          <p className="md:inline hidden  align-middle text-gray-700 ml-2 mr-2 text-lg">
             {post.author.name}
           </p>
         </div>
@@ -54,7 +54,8 @@ const PostCard = ({ post }) => {
           </span>
         </div>
       </div>
-      <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
+      {/* Post Excerpt */}
+      <p className="md:block hidden text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
         {post.excerpt}
       </p>
       <div className="text-center">
