@@ -21,7 +21,7 @@ export default function Home({}) {
   return (
     <div className="container mx-auto lg:px-10 mb-8 px-2">
       <head>
-        <title>Passing Colors</title>
+        <title>Cheat Codes</title>
         <meta charset="utf-8" />
         <meta name="language" content="ES" />
         <meta name="robots" content="index,follow" />
@@ -29,10 +29,10 @@ export default function Home({}) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="white" />
         {/* Facebook */}
-        <meta property="og:title" content="Passing Colors" />
+        <meta property="og:title" content="Cheat Codes" />
         <meta property="og:image" content="../../public/wallpaper.png" />
         {/* Twitter */}
-        <meta name="twitter:title" content="Passing Colors" />
+        <meta name="twitter:title" content="Cheat Codes" />
         <meta name="twitter:image" content="../../public/wallpaper.png" />
         <meta name="twitter:card" content="../../public/wallpaper.png" />
         <meta name="description" content="Sharing my journey through life!" />

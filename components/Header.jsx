@@ -15,27 +15,30 @@ const Header = () => {
 
   return (
     <div className="container md:mx-auto md:px-10 mb-8">
-      <div className="md:border-b w-full md:inline-block border-blue-400 pt-8 md:pb-8">
+      <div className="md:border-b w-full md:inline-block border-blue-400 pt-8 md:pb-5">
         <div className="md:float-left md:text-left block text-center">
           <Link href="/">
             <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-4xl text-white">
-              Passing Colors
+              {/* <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-header text-4xl text-white"> */}
+              Cheat Codes
             </span>
           </Link>
-          <br></br>
-          <span className="text-yellow-400 text-md font-semibold">
-            A blog developed and&nbsp;
-          </span>
-          <a
-            className="text-yellow-400 text-md font-semibold"
-            href="/predents-only"
-          >
-            written
-          </a>
+          <br />
+          <div>
+            <span className="text-yellow-400 text-md font-semibold">
+              A blog developed and&nbsp;
+            </span>
+            <a
+              className="text-yellow-400 text-md font-semibold"
+              href="/predents-only"
+            >
+              written
+            </a>
 
-          <span className="text-yellow-400 text-md font-semibold">
-            &nbsp;by Apurva Shah
-          </span>
+            <span className="text-yellow-400 text-md font-semibold">
+              &nbsp;by Apurva Shah
+            </span>
+          </div>
         </div>
         <div className="hidden md:float-left md:contents">
           <a
