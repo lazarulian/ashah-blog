@@ -23,7 +23,7 @@ const PostDetails = ({ post }) => {
         {/* General */}
         <title>{post.title}</title>
         <meta name="description" content={post.excerpt} />
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="language" content="ES" />
         <meta name="robots" content="index,follow" />
         {/* Apple */}

@@ -19,7 +19,7 @@ const CategoryPost = ({ posts, slug, params }) => {
       <head>
         {/* General */}
         <title>Cheat Codes</title>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="language" content="ES" />
         <meta name="robots" content="index,follow" />
         {/* Apple */}

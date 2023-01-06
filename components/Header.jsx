@@ -24,26 +24,14 @@ const Header = () => {
             </span>
           </Link>
           <br />
-          <div>
-            <span className="text-yellow-400 text-md font-semibold">
-              A blog developed and&nbsp;
-            </span>
-            <a
-              className="text-yellow-400 text-md font-semibold"
-              href="/predents-only"
-            >
-              written
-            </a>
-
-            <span className="text-yellow-400 text-md font-semibold">
-              &nbsp;by Apurva Shah
-            </span>
-          </div>
+          <span className="text-yellow-400 text-md font-semibold">
+            A blog developed and written by Apurva Shah
+          </span>
         </div>
         <div className="hidden md:float-left md:contents">
           <a
             href="https://www.apurvashah.org/"
-            class="md:float-right  text-white font-bold py-2 px-4 ml-4 border border-white rounded transition: duration-500 hover:text-yellow-400 hover:border-yellow-400"
+            className="md:float-right  text-white font-bold py-2 px-4 ml-4 border border-white rounded transition: duration-500 hover:text-yellow-400 hover:border-yellow-400"
           >
             Portfolio
           </a>
