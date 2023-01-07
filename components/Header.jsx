@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import { getCategories } from "../services";
+import { ImHome } from "react-icons/im";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -16,17 +17,21 @@ const Header = () => {
   return (
     <div className="container md:mx-auto md:px-10 mb-8">
       <div className="md:border-b w-full md:inline-block border-blue-400 pt-8 md:pb-5">
-        <div className="md:float-left md:text-left block text-center">
-          <Link href="/">
-            <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-4xl text-white">
-              {/* <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-header text-4xl text-white"> */}
-              Cheat Codes
-            </span>
-          </Link>
-          <br />
-          <span className="text-yellow-400 text-md font-semibold">
-            A blog developed and written by Apurva Shah
-          </span>
+        <div className="md:float-left md:text-left block">
+          <div className="md:float-left md:text-left flex justify-center">
+            <Link
+              href="/"
+              className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-3xl text-white pr-2 pt-1"
+            >
+              <ImHome />
+            </Link>
+            <Link href="/">
+              <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-4xl text-white">
+                {/* <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-header text-4xl text-white"> */}
+                CheatCodes
+              </span>
+            </Link>
+          </div>
         </div>
         <div className="hidden md:float-left md:contents">
           <a
