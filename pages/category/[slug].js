@@ -33,12 +33,12 @@ const CategoryPost = ({ posts, slug, params }) => {
         <meta name="twitter:image" content="../../public/wallpaper.png" />
         <meta name="twitter:card" content="../../public/wallpaper.png" />
       </head>
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {posts.map((post, index) => (
-              // <PostCard key={index} post={post.node} />
-              <div className="w-64 h-64">
+              <div className="ml-7 md:pl-0 w-64 h-64">
                 <FeaturedPostCard key={index} post={post.node} />
               </div>
             ))}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Author = ({ author }) => {
   return (
-    <div className="grid grid-cols-5 mt-10 mb-4 p-12 rounded-lg bg-black bg-opacity-20">
+    <div className="grid grid-cols-5 mt-10 mb-4 p-12 rounded-lg bg-slate-600 bg-opacity-60">
       <div className="col-span-1">
         <Image
           alt={author.name}

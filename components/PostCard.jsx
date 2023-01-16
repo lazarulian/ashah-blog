@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
       </div>
       <h1
         className="transition duration-1000 text-center mb-4 mr-6 ml-6 cursor-pointer 
-      hover:text-pink-600 text-2xl font-semibold"
+      hover:text-indigo-600 text-2xl font-semibold"
       >
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
@@ -37,7 +37,7 @@ const PostCard = ({ post }) => {
         <div className="font-medium text-lg text-gray-700 mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-7 inline ml-2 mr-2 text-pink-500"
+            className="h-7 w-7 inline ml-2 mr-2 text-indigo-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -60,7 +60,7 @@ const PostCard = ({ post }) => {
       </p>
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
-          <span className="transition duration-500 transform hover:-translate-y-1- hover:bg-blue-300 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+          <span className="transition duration-500 transform hover:-translate-y-1- hover:bg-gray-700 inline-block bg-indigo-600 opacity-70 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
             Continue Reading
           </span>
         </Link>
