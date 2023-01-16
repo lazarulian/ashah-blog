@@ -1,7 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import { getCategories } from "../services";
-import { ImHome } from "react-icons/im";
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -22,9 +23,7 @@ const Header = () => {
             <Link
               href="/"
               className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-3xl text-white pr-2 pt-1"
-            >
-              <ImHome />
-            </Link>
+            ></Link>
             <Link href="/">
               <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-bold text-4xl text-white">
                 {/* <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-header text-4xl text-white"> */}
