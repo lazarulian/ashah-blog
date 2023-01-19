@@ -31,9 +31,9 @@ export default function Example() {
     <Disclosure as="nav" className="mb-4 bg-gray-200">
       {({ open }) => (
         <>
-          <div className="container md:mx-auto md:px-10 mb-8">
+          <div className="container lg:mx-auto lg:px-10 mb-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -44,7 +44,7 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <Link href="/">
                     <img
@@ -61,23 +61,23 @@ export default function Example() {
                     />
                   </Link>
                   <Link href="/">
-                    <span className="transition duration-500 hover:text-indigo-500 cursor-pointer font-semibold px-3 text-2xl text-slate-600 hidden md:block">
+                    <span className="transition duration-500 hover:text-indigo-500 cursor-pointer font-semibold px-3 text-2xl text-slate-600 hidden lg:block">
                       {/* <span className="transition duration-500 hover:text-yellow-400 cursor-pointer font-header text-4xl text-white"> */}
                       CheatCodes
                     </span>
                   </Link>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
                 {/* Profile dropdown */}
-                <div className="hidden sm:ml-6 sm:block px-3">
+                <div className="hidden md:ml-6 md:block px-3">
                   <div className="flex space-x-4">
                     {categories.map((category) => (
                       <Link
                         key={category.slug}
                         href={`/category/${category.slug}`}
                       >
-                        <span className="md:float-right mt-1 align-middle text-slate-600 font-semibold cursor-pointer transition duration-500 hover:text-indigo-500">
+                        <span className="lg:float-right mt-1 align-middle text-slate-600 font-semibold cursor-pointer transition duration-500 hover:text-indigo-500">
                           {category.name}
                         </span>
                       </Link>
@@ -151,7 +151,7 @@ export default function Example() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
               <div className=" text-white bg-indigo-600 opacity-70 block px-3 py-2 rounded-md text-base font-medium w-full text-center">
                 <Link key="Home" href="/">

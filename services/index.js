@@ -76,14 +76,27 @@ export const getRecentPosts = async () => {
     query GetPostDetails() {
       posts(
         orderBy: createdAt_DESC
-        last: 3
+        first: 4
         ) {
-          title
-          featuredImage {
-            url
+          author {
+            bio
+            name
+            id
+            photo {
+              url
+            }
           }
           createdAt
           slug
+          title
+          excerpt
+          featuredImage {
+            url
+          }
+          categories {
+            name
+            slug
+          }
         }
     }
   `;
@@ -130,7 +143,10 @@ export const getCategories = async () => {
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetCategoryPost() {
-      posts(where: {featuredPost: true}) {
+      posts(
+          where: {featuredPost: true}
+          orderBy: createdAt_DESC
+          ) {
         author {
           name
           photo {
@@ -155,7 +171,10 @@ export const getFeaturedPosts = async () => {
 export const getCategoryPost = async (slug) => {
   const query = gql`
     query GetCategoryPost($slug: String!) {
-      postsConnection(where: { categories_some: { slug: $slug } }) {
+      postsConnection(
+        where: { categories_some: { slug: $slug } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           cursor
           node {
