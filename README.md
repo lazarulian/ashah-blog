@@ -1,9 +1,14 @@
 
-## Author's Note
+# Welcome to CheatCodes
+
+![preview](https://github.com/lazarulian/cheatcodes/blob/master/public/wallpaper.png)
+
 Welcome to my blog! This blog site is written with Next.js, Tailwind.css, and of course, html/css. For the content management system and data store, I use GraphCMS and GraphQL for querying. 
 
 The purpose of the blog was to disseminate some of the information that I found useful or just awesome in different moments of my life. I appreciate you for visiting!
 
+
+---
 ## Stack Information
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
