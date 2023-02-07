@@ -10,13 +10,14 @@ const AlbumMonth = () => {
       </h3>
       <div className="flex justify-center">
         <Link
-          key={"Endless"}
-          href={"https://en.wikipedia.org/wiki/Endless_(Frank_Ocean_album)"}
+          key={"Pilgrim's Paradise"}
+          href={"https://genius.com/albums/Daniel-caesar/Pilgrims-paradise"}
         >
           <img
             src={
-              "https://archive.org/download/CDQEndlessFrankOcean/Endless%20Streaming%20Art%20(Iridescent%20Stickers).png"
+              "https://images.genius.com/e1e750d796bafaf7e13a41f681c78114.1000x1000x1.jpg"
             }
+            alt="Pilgrim's Paradise - Daniel Caesar"
             className="object-fill"
           ></img>
         </Link>

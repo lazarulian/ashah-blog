@@ -7,11 +7,15 @@ import { getFeaturedPosts } from "../services";
 
 const responsive = {
   superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
+    breakpoint: { max: 4000, min: 1600 },
     items: 5,
   },
+  normalDesktop: {
+    breakpoint: { max: 1600, min: 1400 },
+    items: 4,
+  },
   desktop: {
-    breakpoint: { max: 1024, min: 768 },
+    breakpoint: { max: 1400, min: 768 },
     items: 3,
   },
   tablet: {
@@ -79,8 +83,10 @@ const FeaturedPosts = () => {
     <div className="mb-8">
       <Carousel
         infinite
+        containerClass="container"
         customLeftArrow={customLeftArrow}
         customRightArrow={customRightArrow}
+        autoPlay={true}
         responsive={responsive}
         itemClass="px-4"
       >
