@@ -36,9 +36,10 @@ const CategoryPost = ({ posts, slug, params }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-2 lg:gap-4"> */}
+          <div className="mx-10">
             {posts.map((post, index) => (
-              <div className="ml-7 md:pl-0 w-64 h-64">
+              <div className="pb-5 lg:pb-10">
                 <FeaturedPostCard key={index} post={post.node} />
               </div>
             ))}
