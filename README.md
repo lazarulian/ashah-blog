@@ -1,5 +1,5 @@
 
-# Welcome to CheatCodes
+# Deprecated!
 
 ![preview](https://github.com/lazarulian/cheatcodes/blob/master/public/wallpaper.png)
 
